@@ -16,6 +16,8 @@ window.Vue = require('vue');
  */
 
 
+
+Vue.component('load-wallet-component', require('./components/LoadWalletComponent.vue'));
 Vue.component('add-wallet-component', require('./components/AddWalletComponent.vue'));
 
 const app = new Vue({
