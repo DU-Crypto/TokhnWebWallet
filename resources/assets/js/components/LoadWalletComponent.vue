@@ -16,6 +16,7 @@ export default {
    data() {
             return{
                 Account: {
+                    address: [],
                     privateKey: [],
                     publicKey: [],
                     utxos: []
@@ -30,29 +31,31 @@ export default {
       var input = e.target;
 
     var reader = new FileReader();
+    var text;
     reader.onload = function(){
-      var text = reader.result;
+       text = reader.result;
       console.log(reader.result.substring(0, 200));
     };
     reader.readAsText(input.files[0]);
-    var wallet = JSON.parse( reader.result);
+    var wallet = JSON.parse( text);
     var account = this.Account;
+                account.address= wallet.address;
                 account.publicKey=wallet.publicKey;
                 account.privateKey=wallet.privateKey;
                 account.utxos=wallet.utxos;
     console.log(wallet);
 
-    //axios.get('/user', {
-  //  params: {
-  //    account: wallet
-  //    }
-  //  })
-    //.then(function (response) {
-//      console.log(response);
-  //  })
-  //  .catch(function (error) {
-    //  console.log(error);
-  //  });
+   //  axios.post('/wallet', {
+   // params: {
+   //   account: wallet
+   //   }
+   // })
+   //  .then(function (response) {
+   //   console.log(response);
+   // })
+   // .catch(function (error) {
+   //   console.log(error);
+   // });
 
     }
   }

@@ -29,7 +29,7 @@ export default {
                 // 1) '04' + hex string of x + hex string of y; or
                 // 2) object with two hex string properties (x and y); or
                 // 3) object with two buffer properties (x and y)
-                var address = publicKey.encode('sha256'); // case 1
+                var address = publicKey.encode('hex'); // case 1
 
                 var pubstr = {
                     x: x.toString('hex'),
@@ -51,7 +51,7 @@ export default {
                 console.log(privateKey);
 
                 var file = '/tmp/Wallet.json'
-                     var wallet = {"publicKey":publicKey,"privateKey":privateKey,"utxos":utxos};
+                     var wallet = {"address": address,"publicKey":publicKey,"privateKey":privateKey,"utxos":utxos};
                   var walletJSON =JSON.stringify(wallet);
 
               console.log(walletJSON);

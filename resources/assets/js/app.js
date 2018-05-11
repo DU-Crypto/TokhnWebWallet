@@ -15,11 +15,12 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+Vue.component('Tokhn-wallet-component', require('./components/TokhnWComponent.vue'));
 
-
-Vue.component('load-wallet-component', require('./components/LoadWalletComponent.vue'));
 Vue.component('add-wallet-component', require('./components/AddWalletComponent.vue'));
 
+Vue.component('load-wallet-component', require('./components/LoadWalletComponent.vue'));
+Vue.component('wallet-table-component', require('./components/WalletTableComponent.vue'));
 const app = new Vue({
     el: '#app'
 });
