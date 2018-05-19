@@ -224,24 +224,13 @@
           };
           reader.readAsText(input.files[0]);
           var wallet = JSON.parse(text);
-          var account = this.Account;
+          var account = this.Token;
                       account.address= wallet.address;
                       account.publicKey=wallet.publicKey;
                       account.privateKey=wallet.privateKey;
                       account.utxos=wallet.utxos;
           console.log(wallet);
-
-         //  axios.post('/wallet', {
-         // params: {
-         //   account: wallet
-         //   }
-         // })
-         //  .then(function (response) {
-         //   console.log(response);
-         // })
-         // .catch(function (error) {
-         //   console.log(error);
-         // });
+          this.loggedin = true;
 
           }
         }
