@@ -10,12 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Route::post('/wallet/{account}', 'WalletController@index');
 
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/start', 'StartController@index');
-
-Route::get('/wallet/{account}', 'WalletController@index');
-
-// Route::get('/wallet', 'WalletController@index');

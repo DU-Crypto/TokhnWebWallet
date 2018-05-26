@@ -1,9 +1,10 @@
-<!doctype html>
-<html>
-    <head>
-        <title> TokhnW </title>
-    </head>
-    <body>
-        <h1>Wallet</h1>
-    </body>
-</html>
+@extends('layouts.app')
+
+@section('content')
+
+<div style="width: 500px; margin-left: 20px;">
+<Tokhn-wallet-component></load-wallet-component>
+<add-wallet-component></add-wallet-component> 
+
+</div>
+ @endsection('content')

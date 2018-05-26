@@ -9,17 +9,16 @@
                       </tr>
                     </thead>
                     <tbody>
-                     
+
                        <!-- @foreach ($accounts as $account) -->
-                      
-                          <!--  <tr>
-                            <td><deposit-component></deposit-component>
-                             <a class="btn btn-success" href="{{ url('/withdraw/' . $account->id) }}" >
-                                 Withdraw
-                              </a></td> -->
-                            <!-- <td>{{ $account->address }}</td> -->
-                            <!-- <td>{{ $account->balance }}</td> -->
-                          <!-- </tr> -->
+
+                         <tr>
+                            <td>
+                        luv
+                            </td>
+                             <td>04f101b45bd310249c0ffd6a1f3217689c8b3265ac0078c562f8d617df7126a6e8c1a703565f8342a747ea107dd9b6d849</td>
+                            <td>0</td>
+                        </tr>
                       <!-- @endforeach -->
                     </tbody>
           </table>
@@ -34,7 +33,7 @@
         },
 
         created() {
-            
+
             console.log(this.wallet); // output is "undefined"
 
         },
