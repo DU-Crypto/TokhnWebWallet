@@ -8,14 +8,14 @@
                 <div class="panel-heading">Tokhn</div>
 
                 <div class="panel-body">
-                    <h1><?= $account;?></h1>
+                   
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
                         </div>
                     @endif
                     <wallet-table-component></wallet-table-component>
-                    
+
 
                 </div>
             </div>
